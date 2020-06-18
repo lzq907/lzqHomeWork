@@ -6,15 +6,13 @@ public class work4 {
         int [] result=generate(input);
         System.out.println("偶数的个数为"+result[0]+",奇数的个数为"+result[1]);
         combine(input,result);
-
-
     }
 
 
 
     private static int[] generate(char[] input) {
         int [] result= new int[2];
-        for (int i=0;i<7;i++){
+        for (int i=0;i<8;i++){
             if (input[i]%2==0)
             {
                 result[0]++;//奇数个数
@@ -33,7 +31,7 @@ public class work4 {
         char[] oushuzu = new char[8];
 
 
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 8; i++) {
             if (input[i] % 2 == 0) {
                 oushuzu[k] = input[i];
                 k++;
@@ -55,7 +53,7 @@ public class work4 {
             }
 
             for (int j = result[0] ; j < result[1]; j++) {
-                shuzu[i] = oushuzu[j];
+                shuzu[i] = jishuzu[j];
                 i++;
             }
         }else
@@ -68,11 +66,11 @@ public class work4 {
                     n++;
                 }
                for (int j = result[1]; j < result[0]; j++) {
-                    shuzu[n] = jishuzu[j];
+                    shuzu[n] = oushuzu[j];
                     n++;
                 }
             }
-        for(int t=0;t<7;t++)
+        for(int t=0;t<8;t++)
             System.out.print(shuzu[t]+" ");
     }
 }
